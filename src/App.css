@@ -1,9 +1,31 @@
+:root{
+  --dark-blue: #191126;
+  --purple: #442a37;
+  --brown: #995454;
+  --red: #cd5551;
+}
 html, body, .root {
   height: 100%;
 }
 body {
   line-height: 1.5;
 }
+#root{
+  background: black;
+  height: 100vh;
+  width: 100vw;
+}
 .app {
+  height: 100vh;
+  width: 958px;
+  overflow: auto;
+  margin: 0 auto;
+  background-size: contain;
+  background-image: url('images/groovy-universe.jpg');
+}
+.card{
   background: white;
+  width: 350px;
+  height: 450px;
+  margin: 0 auto;
 }
