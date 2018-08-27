@@ -1,6 +1,8 @@
 :root{
   --dark-blue: #191126;
   --purple: #442a37;
+  --violet: #581E44;
+  --alternate-color: #4C3959;
   --brown: #995454;
   --red: #cd5551;
 }
@@ -24,8 +26,87 @@ body {
   background-image: url('images/groovy-universe.jpg');
 }
 .card{
-  background: white;
+  background: var(--violet);
   width: 350px;
   height: 450px;
   margin: 0 auto;
+}
+header{
+  height: 100px;
+  padding-left: 10px;
+  padding-top: 10px;
+  background: var(--dark-blue);
+  color: #fff;
+  font-family: 'Righteous', cursive;
+}
+.fa{
+  cursor: pointer;
+}
+header .fa-globe:hover:before{
+  content: "Luke,";
+}
+header .fa-moon-o:hover:before{
+  content: " I";
+}
+header .fa-rocket:hover:before{
+  content: " am";
+}
+header .fa-star:hover:before{
+  content: " your";
+}
+header .fa-sun-o:hover:before{
+  content: " father.";
+}
+.fa-hand-spock-o{
+  position: relative;
+  top: 96vh;
+  color: white;
+}
+.fa-hand-spock-o:hover:before{
+  content: "LOL just kidding";
+}
+h1{
+  font-size: 26px;
+  margin-top: 5px;
+}
+.icons-container{
+  display: flex;
+  justify-content: space-around;
+}
+.info{
+  color: #fff;
+  padding: 0 5px;
+  height: 280px;
+}
+button{
+  display: block;
+  background: white;
+  margin: 0 auto;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+button .fa{
+  position: relative;
+  left: 0;
+}
+button:hover .fa{
+  animation: launch 1s infinite ease-in-out;
+}
+h2{
+  padding-left: 40px;
+}
+ul{
+  list-style-type: none;
+  font-size: 12px;
+}
+span{
+  font-weight: bold;
+}
+@keyframes launch{
+  100% { 
+    left: 22px;
+    }
 }

@@ -20,9 +20,20 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="app">
+        <i class="fa fa-hand-spock-o"></i>
         <div className="card">
+          <header>
+            <h1>Star Wars Random Planets</h1>
+            <div className="icons-container">
+              <i className="fa fa-globe"></i>
+              <i className="fa fa-moon-o"></i>
+              <i className="fa fa-rocket"></i>
+              <i className="fa fa-star"></i>
+              <i className="fa fa-sun-o"></i>
+            </div>
+          </header>
           <div className="info">
-            <h1>Jakku</h1>
+            <h2>Jakku</h2>
             <ul>
               <li><span>Clima:</span> Desconhecido</li>
               <li><span>Gravidade:</span> Desconhecido</li>
@@ -34,6 +45,7 @@ export default class App extends React.Component {
               <li><span>Filmes:</span> Desconhecido</li>
             </ul>
           </div>
+          <button>Next <i class="fa fa-space-shuttle"></i></button>
         </div>
       </div>
     )
