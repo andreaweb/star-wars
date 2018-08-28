@@ -13,8 +13,12 @@ export default class App extends React.Component {
   state = {
   }
 
+  getRandomNumber(){
+    return Math.floor(Math.random()*61)
+  }
+
   componentDidMount(){
-    PlanetsAPI.getPlanet().then((planet) => console.log(planet))
+    PlanetsAPI.getPlanet(this.getRandomNumber()).then((planet) => console.log(planet))
   }
 
   render() {
@@ -33,7 +37,7 @@ export default class App extends React.Component {
             </div>
           </header>
           <Planets/>
-          <button>Next <i class="fa fa-space-shuttle"></i></button>
+          <button>Next <i className="fa fa-space-shuttle"></i></button>
         </div>
       </div>
     )
