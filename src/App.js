@@ -39,6 +39,7 @@ export default class App extends React.Component {
           <Planets {...this.state} />
           <button onClick={this.getRandomPlanet}>Next <i className="fa fa-space-shuttle"></i></button>
         </div>
+        <span className="picCopyright">Photo by Lucas Benjamin on Unsplash</span>
       </div>
     )
   }
