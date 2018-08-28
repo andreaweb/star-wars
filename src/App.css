@@ -66,8 +66,9 @@ header .fa-sun-o:hover:before{
   content: "LOL just kidding";
 }
 h1{
-  font-size: 26px;
+  font-size: 23px;
   margin-top: 5px;
+  text-align: center;
 }
 .icons-container{
   display: flex;
@@ -95,12 +96,17 @@ button .fa{
 button:hover .fa{
   animation: launch 1s infinite ease-in-out;
 }
-h2, ul{
+h2{
+  margin-bottom: 0;
+  margin-top: 25px;
+  font-size: 18px;
   padding-left: 30px;
 }
 ul{
   list-style-type: none;
+  padding-left: 30px;
   font-size: 12px;
+  margin-top: 5px;
 }
 span{
   font-weight: bold;

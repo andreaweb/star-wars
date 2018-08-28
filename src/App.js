@@ -1,24 +1,24 @@
 import React from 'react'
-// import { Switch, Route } from 'react-router-dom'
-import { Planets } from './Planets'
+// import { Switch, Route } from 'react-router-dom' //will add later for gh-pages
+import Planets from './Planets'
 import * as PlanetsAPI from './PlanetsAPI'
 import './App.css'
 
-if (process.env.NODE_ENV !== 'production') {
-  const {whyDidYouUpdate} = require('why-did-you-update');
-  whyDidYouUpdate(React);
-}
-
 export default class App extends React.Component {
   state = {
+    planet: ''
   }
 
   getRandomNumber(){
     return Math.floor(Math.random()*61)
   }
 
+  getRandomPlanet = () =>{
+    return PlanetsAPI.getPlanet(this.getRandomNumber()).then((planet) => this.setState({planet}))
+  }
+
   componentDidMount(){
-    PlanetsAPI.getPlanet(this.getRandomNumber()).then((planet) => console.log(planet))
+    this.getRandomPlanet()
   }
 
   render() {
@@ -36,8 +36,8 @@ export default class App extends React.Component {
               <i className="fa fa-sun-o"></i>
             </div>
           </header>
-          <Planets/>
-          <button>Next <i className="fa fa-space-shuttle"></i></button>
+          <Planets {...this.state} />
+          <button onClick={this.getRandomPlanet}>Next <i className="fa fa-space-shuttle"></i></button>
         </div>
       </div>
     )
