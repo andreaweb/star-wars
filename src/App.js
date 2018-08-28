@@ -1,6 +1,6 @@
 import React from 'react'
 // import { Switch, Route } from 'react-router-dom'
-import Planets from './Planets'
+import { Planets } from './Planets'
 import * as PlanetsAPI from './PlanetsAPI'
 import './App.css'
 
@@ -20,7 +20,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <i class="fa fa-hand-spock-o"></i>
+        <i className="fa fa-hand-spock-o"></i>
         <div className="card">
           <header>
             <h1>Star Wars Random Planets</h1>
@@ -32,19 +32,7 @@ export default class App extends React.Component {
               <i className="fa fa-sun-o"></i>
             </div>
           </header>
-          <div className="info">
-            <h2>Jakku</h2>
-            <ul>
-              <li><span>Clima:</span> Desconhecido</li>
-              <li><span>Gravidade:</span> Desconhecido</li>
-              <li><span>População:</span> Desconhecido</li>
-              <li><span>Período Orbital:</span> Desconhecido</li>
-              <li><span>Período de Rotação:</span> Desconhecido</li>
-              <li><span>Água na Superfície:</span> Desconhecido</li>
-              <li><span>Diâmetro:</span> Desconhecido</li>
-              <li><span>Filmes:</span> Desconhecido</li>
-            </ul>
-          </div>
+          <Planets/>
           <button>Next <i class="fa fa-space-shuttle"></i></button>
         </div>
       </div>
