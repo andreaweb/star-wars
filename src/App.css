@@ -117,7 +117,7 @@ span{
     }
 }
 .picCopyright{
-  position: relative;
-  bottom: -30px;
-  left: 645px;
+  position: absolute;
+  bottom: 0;
+  left: 50vw;
 }
