@@ -10,7 +10,7 @@
     "sinon": "^6.1.5",
     "why-did-you-update": "^0.1.1"
   },
-  "homepage": "https://andreaweb.github.io/star-wars",
+  "homepage": "https://andreaweb.github.io/star-wars/",
   "devDependencies": {
     "babel-jest": "^23.4.2",
     "enzyme": "^3.4.4",
